@@ -1,10 +1,12 @@
 # Import custom functions
 from voice_engine import ve, calib
-from tts import tts_engine as ttse
 from internet_test import ping
 # Import installed libraries
 import csv
-# Check for internet connection. Use WIT.AI if you have one and use
+import os
+def ttse(text):
+	text2 = text
+	os.system("espeak -v en-us '" + text2 + "' 2>/dev/null")
 # PocketSphinx if offline.
 internet_on = ping()
 with open('preferences.csv') as  csvfile:
@@ -12,12 +14,11 @@ with open('preferences.csv') as  csvfile:
     for row in readCSV:
         g = row[0]
 calib()
-ttse(g, "Bright is online")
 while(True):
-    ttse(g, "Awaiting user input")
+    ttse("Awaiting user input")
     print("Awaiting user input")
     recog = ve(False, internet_on)
-    ttse(g, "Recognised: " + recog)
+    ttse("Recognised: " + recog)
     print("Recognised: " + recog)
     #if hotword == "hey illuminate" :
     #    print("Hotword Detected")

@@ -12,7 +12,7 @@ def ve(dummy_engine, internet_on):
     # Get Audio
     with sr.Microphone() as source:
         audio = r.listen(source)
-        if internet_on == True:
+        if True:
             # Use Wit AI
             WIT_AI_KEY = "E7EQGHO4L2ZLAJCZF32UGNN3WA5ILCBW"
             try:
