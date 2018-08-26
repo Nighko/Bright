@@ -1,14 +1,16 @@
-# Voice Engine class. ABSTRACT
-def ve(dummy_engine, internet_on):
+# Voice Engine class.
+def calib():
+    import speech_recognition as sr
+    r = sr.Recognizer()
+    with sr.Microphone() as source:
+        r.adjust_for_ambient_noise(source)
 
+def ve(dummy_engine, internet_on):
     import speech_recognition as sr
     r = sr.Recognizer()
     # Check for internet connection (If connected: Wit.AI/If not connected: PocketSphinx)
     # Get Audio
     with sr.Microphone() as source:
-        print("Calibrating")
-        r.adjust_for_ambient_noise(source)
-        print("Say something!")
         audio = r.listen(source)
         if internet_on == True:
             # Use Wit AI
