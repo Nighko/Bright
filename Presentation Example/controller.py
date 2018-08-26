@@ -15,9 +15,12 @@ calib()
 ttse(g, "Bright is online")
 while(True):
     ttse(g, "Awaiting user input")
+    print("Awaiting user input")
     recog = ve(False, internet_on)
     ttse(g, "Recognised: " + recog)
+    print("Recognised: " + recog)
     #if hotword == "hey illuminate" :
     #    print("Hotword Detected")
     #else:
     #    print("Not Hotword D: it thinks you said: " + hotword)
+input()
