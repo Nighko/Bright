@@ -1,0 +1,50 @@
+//B&D
+
+void forwards (int power) {
+	motor[motorB] = power-20;
+	motor[motorA] = -power;
+	motor[motorC] = -power;
+	motor[motorD] = power-20;
+	}
+void reverse(int power) {
+	motor[motorB] = power;
+	motor[motorA] = -power;
+	motor[motorC] = power;
+	motor[motorD] = -power;
+}
+void diagbackr(int power)
+{
+	motor[motorA] = power;
+	motor[motorD] = -power;
+
+}
+void diagbackl(int power)
+{
+	motor[motorC] = power;
+	motor[motorB] = -power;
+
+}
+void diagfleft(int power)
+{
+	motor[motorC] = -power;
+	motor[motorB] = power;
+}
+void diagfright(int power)
+{
+	motor[motorA] = -power;
+	motor[motorD] = power;
+}
+void moveright(int power)
+{
+	motor[motorC] = power;
+	motor[motorA] = -power;
+	motor[motorD] = power-20;
+	motor[motorB] = -power+20;
+}
+void moveleft(int power)
+{
+	motor[motorC] = power;
+	motor[motorA] = -power;
+	motor[motorD] = -power;
+	motor[motorB] = power;
+}
