@@ -1,10 +1,11 @@
 ### Bright - Speech Recognition
 
-** To Do **
-- Release Publicly
-- Add Spotify Functionality
-- Add SoundCloud Functionality (Might Not work)
-- Add Email & Calander Support
-- Create Raspberry Pi GUIDE
+Welcome to Bright!
 
-Bright Speech Recognition - Work In progress
+Bright is a voice assistant which enables you to:
+- Play music (Spotify, Local, possibly more later!)
+- Read, add and remove events from your calendar
+- Fetch weather (Google, Yahoo, Maybe weather underground?)
+- Get the time and date
+- Ask for facts!
+- Possibly more!
